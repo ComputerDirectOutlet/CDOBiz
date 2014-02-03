@@ -1,5 +1,15 @@
 // Use Compass ('cause it rocks!)
-@import "compass";
+
+// Bower Imports
+@import "../bower/bourbon/dist/bourbon";
+@import "../bower/neat/app/assets/stylesheets/neat";
+
+
+//
+
+
+//@import "vendor/normalize-css";
+
 
 // Font weights
 $light: 100;
