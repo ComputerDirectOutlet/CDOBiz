@@ -1,0 +1,5 @@
+// ------------------------------------------------------------
+// Override Neat's grid settings
+// ------------------------------------------------------------
+$column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, 3) !default; // Gutter between each two columns

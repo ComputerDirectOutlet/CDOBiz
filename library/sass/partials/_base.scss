@@ -1,14 +1,9 @@
 // Use Compass ('cause it rocks!)
+@import "compass";
 
 // Bower Imports
 @import "../bower/bourbon/dist/bourbon";
 @import "../bower/neat/app/assets/stylesheets/neat";
-
-
-//
-
-
-//@import "vendor/normalize-css";
 
 
 // Font weights
@@ -17,10 +12,23 @@ $regular: 400;
 $bold: 600;
 
 // Base Font
-$base-font-family: sans-serif;
+$base-font-family: proxima-nova;
 $base-font-weight: $regular;
 $base-font-size: 13px;
 $base-line-height: 1.4;
+
+// Heading Font
+$heading-font-family: proxima-nova;
+$heading-font-weight: $regular;
+$heading-font-size: 13px;
+$heading-line-height: 1.4;
+
+
+// Fancy Font
+$fancy-font-family: clavo;
+$fancy-font-weight: $regular;
+$fancy-font-size: 13px;
+$fancy-line-height: 1.4;
 
 // Fixed Font
 $fixed-font-family: monospace;
@@ -29,5 +37,15 @@ $fixed-line-height: $base-line-height;
 
 // Headings
 $header-font-weight: $bold;
+
+
+#page {
+    background-color: white;
+    min-width: 1024px;
+}
+
+body {
+    font-family: $base-font-family;
+}
 
 @import "modules/all";
