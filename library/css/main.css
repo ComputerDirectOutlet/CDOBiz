@@ -130,6 +130,16 @@ body {
   width: 100%;
 }
 
+.page-heading h1 {
+  padding: 90px 0px 10px 10px; 
+  color:#FFFFFF;
+}
+
+p {
+padding-left: 2%;
+padding-right: 2%;
+}
+
 /* line 1, ../sass/partials/_reset.scss */
 a {
   text-decoration: none;
