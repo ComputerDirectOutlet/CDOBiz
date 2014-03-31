@@ -9,22 +9,12 @@
 
 
 #logo-block {
-    @include span-columns(5, block-collapse);
+    @include span-columns(4, block-collapse);
 
 
 }
 
-#button-menu {
-    position: absolute;
-        display: block;
-        float: left;
-        height: 86px;
-        width: 86px;
-        border: 1px solid #1c1c1c; // stroke
-        background-color: #0f0f0f!important; // layer fill content
-        z-index: 100;
-        background: url('../images/menu.png') center no-repeat;
-}
+
 
 #logo {
     background-color:rgba(34,34,34,0.75);
@@ -32,7 +22,7 @@
     display: block;
     float: right;
     height: 86px;
-    padding-left: 86px;
+    //padding-left: 86px;
     a {
 
         display: block;
@@ -45,9 +35,9 @@
 
 .user-menu {
     height: 86px;
-    @include span-columns(7, block-collapse);
+    @include span-columns(8, block-collapse);
     @include omega();
-    background-color:rgba(219,73,75,0.75);
+    background-color:rgba(137,0,0,0.75);
     margin-top: 0;
     margin-bottom: 0;
 
