@@ -1,6 +1,9 @@
+$height-large: 86px;
+$height-small: 44px;
+
 #header {
     position: fixed;
-    height: 86px;
+    height: $height-large;
     width: 100%;
     top: 0px;
 
@@ -10,54 +13,81 @@
 
 #logo-block {
     @include span-columns(4, block-collapse);
+    @include respond-to(handhelds) { 
+       @include span-columns(12, block-collapse); 
+        @include omega();
+    }
 
 
 }
 
-
+#button-menu {
+    position: absolute;
+        display: block;
+        float: left;
+        height: $height-large;
+        width: $height-large;
+        border: 1px solid #1c1c1c; // stroke
+        background-color:rgba(137,0,0,1)!important; // layer fill content
+        z-index: 100;
+        background: url('../images/menu.png') center no-repeat;
+        @include respond-to(medium-screens) {display: none;}
+        @include respond-to(wide-screens) {display: none;}
+}
 
 #logo {
     background-color:rgba(34,34,34,0.75);
     width: 100%;
     display: block;
     float: right;
-    height: 86px;
-    //padding-left: 86px;
+    height: $height-large;
+    @include respond-to(handhelds) { 
+        padding-left: $height-large;
+    }
+
     a {
 
         display: block;
         @include fill-parent();
         background: url('../images/logo.png') center no-repeat;
-        height: 86px;
+        height: $height-large;
     }
 
 }
 
 .user-menu {
-    height: 86px;
+    height: $height-large;
     @include span-columns(8, block-collapse);
     @include omega();
     background-color:rgba(137,0,0,0.75);
     margin-top: 0;
     margin-bottom: 0;
+    @include respond-to(handhelds) { 
+       display: none;
+    }
+    @include respond-to(medium-screens) {     @include omega();}
+    @include respond-to(wide-screens) {     @include omega();}
 
 
     li {
-        @include span-columns(2 of 7, block);
+        @include span-columns(1 of 7, block);
         //@include omega(4n);
         height: 100%;
         //float: right;
         text-align:center;
         padding-top: 32px;
+        text-align: center;
 
         a {
+            text-align: center;
             padding-top: 2px;
             display: inline-block;
-            padding-left: 38px;
+            //padding-left: 38px;
             color: white; // text color
             font-family: $heading-font-family;
             text-transform:uppercase;
-            font-size: 18px;
+            font-size: 16px;
+            @include respond-to(medium-screens) {  font-size: 12px;}
             height: 28px;
         }
 
@@ -66,16 +96,34 @@
 }
 
 
-#search {
-    a {background: url('../images/search.png') no-repeat;}
 
+#search {
+    display: none;
+    //a {background: url('../images/search.png') no-repeat;}
+    @include respond-to(handhelds) { }
+    @include respond-to(medium-screens) { display: block;}
+    @include respond-to(wide-screens) { display: block; }
 }
 #sign-in {
-    a {background: url('../images/signin.png') no-repeat;}
+    display: none;
+    //a {background: url('../images/signin.png') no-repeat;}
+    @include respond-to(handhelds) {}
+    @include respond-to(medium-screens) {display: block; }
+    @include respond-to(wide-screens) { display: block; }
 }
 #cart {
-    a {background: url('../images/cart.png') no-repeat;}
+    display: none;
+    //a {background: url('../images/cart.png') no-repeat;}
+    @include respond-to(handhelds) { }
+    @include respond-to(medium-screens) { display: block;}
+    @include respond-to(wide-screens) { display: block; }
 }
+
+#mobile-header {
+    display: none;
+    @include respond-to(handhelds) { display: block;}
+}
+
 
 
 .page-heading {

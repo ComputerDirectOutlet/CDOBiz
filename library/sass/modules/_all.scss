@@ -30,8 +30,8 @@
 //media query mixin
 //
 
-$break-small: 320px;
-$break-large: 1024px;
+$break-small: 992px;
+$break-large: 1333px;
 
 @mixin respond-to($media) {
   @if $media == handhelds {
