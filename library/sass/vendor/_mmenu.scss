@@ -335,7 +335,7 @@ html.mm-opened .mm-page {
     > a {
       &.mm-subclose {
         background: rgba(0, 0, 0, 0.1);
-        color: rgba(255, 255, 255, 0.3);
+        color: $menu-textcolor;
       }
       &.mm-subopen:after, &.mm-subclose:before {
         border-color: rgba(255, 255, 255, 0.3);
