@@ -1,0 +1,376 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?4sx7zl');
+	src:url('fonts/icomoon.eot?#iefix4sx7zl') format('embedded-opentype'),
+		url('fonts/icomoon.woff?4sx7zl') format('woff'),
+		url('fonts/icomoon.ttf?4sx7zl') format('truetype'),
+		url('fonts/icomoon.svg?4sx7zl#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniF76D:before {
+	content: "\e671";
+}
+.icon-uniF772:before {
+	content: "\e64b";
+}
+.icon-uniF773:before {
+	content: "\e64a";
+}
+.icon-uniF774:before {
+	content: "\e649";
+}
+.icon-uniF775:before {
+	content: "\e648";
+}
+.icon-uniF776:before {
+	content: "\e647";
+}
+.icon-uniF777:before {
+	content: "\e646";
+}
+.icon-uniF778:before {
+	content: "\e645";
+}
+.icon-uniF779:before {
+	content: "\e644";
+}
+.icon-uniF77A:before {
+	content: "\e643";
+}
+.icon-uniF65F:before {
+	content: "\e660";
+}
+.icon-uniF660:before {
+	content: "\e661";
+}
+.icon-uniF661:before {
+	content: "\e662";
+}
+.icon-uniF662:before {
+	content: "\e663";
+}
+.icon-uniF663:before {
+	content: "\e664";
+}
+.icon-uniF664:before {
+	content: "\e665";
+}
+.icon-uniF665:before {
+	content: "\e666";
+}
+.icon-uniF666:before {
+	content: "\e667";
+}
+.icon-uniF690:before {
+	content: "\e672";
+}
+.icon-uniF5FA:before {
+	content: "\e65f";
+}
+.icon-uniF5C3:before {
+	content: "\e670";
+}
+.icon-addfriend:before {
+	content: "\e65d";
+}
+.icon-removefriend:before {
+	content: "\e65e";
+}
+.icon-uniF002:before {
+	content: "\e654";
+}
+.icon-uniF003:before {
+	content: "\e655";
+}
+.icon-uniF00A:before {
+	content: "\e653";
+}
+.icon-intel:before {
+	content: "\e668";
+}
+.icon-amd:before {
+	content: "\e64f";
+}
+.icon-colocation3:before {
+	content: "\e650";
+}
+.icon-server:before {
+	content: "\e64c";
+}
+.icon-servers:before {
+	content: "\e651";
+}
+.icon-hdd:before {
+	content: "\e64e";
+}
+.icon-ram:before {
+	content: "\e64d";
+}
+.icon-sharedhosting:before {
+	content: "\e673";
+}
+.icon-diskspace:before {
+	content: "\e652";
+}
+.icon-mouse:before {
+	content: "\e66a";
+}
+.icon-monitor:before {
+	content: "\e66b";
+}
+.icon-laptop2:before {
+	content: "\e669";
+}
+.icon-powerplug:before {
+	content: "\e66e";
+}
+.icon-tethering:before {
+	content: "\e656";
+}
+.icon-imac:before {
+	content: "\e657";
+}
+.icon-graphicscard:before {
+	content: "\e66d";
+}
+.icon-bluetooth:before {
+	content: "\e658";
+}
+.icon-loved:before {
+	content: "\e659";
+}
+.icon-love:before {
+	content: "\e65a";
+}
+.icon-paypal:before {
+	content: "\e66c";
+}
+.icon-screwdriver:before {
+	content: "\e65c";
+}
+.icon-screwdriver2:before {
+	content: "\e65b";
+}
+.icon-tag:before {
+	content: "\e62e";
+}
+.icon-cart:before {
+	content: "\e634";
+}
+.icon-phone:before {
+	content: "\e642";
+}
+.icon-screen2:before {
+	content: "\e62a";
+}
+.icon-laptop:before {
+	content: "\e62b";
+}
+.icon-mobile:before {
+	content: "\e62c";
+}
+.icon-tablet:before {
+	content: "\e62d";
+}
+.icon-user:before {
+	content: "\e641";
+}
+.icon-spinner2:before {
+	content: "\e633";
+}
+.icon-spinner:before {
+	content: "\e631";
+}
+.icon-search:before {
+	content: "\e62f";
+}
+.icon-meter2:before {
+	content: "\e629";
+}
+.icon-lightning:before {
+	content: "\e66f";
+}
+.icon-menu:before {
+	content: "\e630";
+}
+.icon-happy2:before {
+	content: "\e635";
+}
+.icon-happy:before {
+	content: "\e610";
+}
+.icon-smiley:before {
+	content: "\e611";
+}
+.icon-smiley2:before {
+	content: "\e612";
+}
+.icon-tongue:before {
+	content: "\e613";
+}
+.icon-tongue2:before {
+	content: "\e614";
+}
+.icon-sad:before {
+	content: "\e615";
+}
+.icon-sad2:before {
+	content: "\e616";
+}
+.icon-wink:before {
+	content: "\e617";
+}
+.icon-wink2:before {
+	content: "\e618";
+}
+.icon-grin:before {
+	content: "\e619";
+}
+.icon-grin2:before {
+	content: "\e61a";
+}
+.icon-cool:before {
+	content: "\e61b";
+}
+.icon-cool2:before {
+	content: "\e61c";
+}
+.icon-angry:before {
+	content: "\e61d";
+}
+.icon-angry2:before {
+	content: "\e61e";
+}
+.icon-evil:before {
+	content: "\e61f";
+}
+.icon-evil2:before {
+	content: "\e620";
+}
+.icon-shocked:before {
+	content: "\e621";
+}
+.icon-shocked2:before {
+	content: "\e622";
+}
+.icon-confused:before {
+	content: "\e623";
+}
+.icon-confused2:before {
+	content: "\e624";
+}
+.icon-neutral:before {
+	content: "\e625";
+}
+.icon-neutral2:before {
+	content: "\e626";
+}
+.icon-wondering:before {
+	content: "\e627";
+}
+.icon-wondering2:before {
+	content: "\e628";
+}
+.icon-close:before {
+	content: "\e632";
+}
+.icon-plus:before {
+	content: "\e674";
+}
+.icon-play2:before {
+	content: "\e638";
+}
+.icon-play:before {
+	content: "\e637";
+}
+.icon-forward:before {
+	content: "\e636";
+}
+.icon-arrow-up-left:before {
+	content: "\e63d";
+}
+.icon-arrow-up:before {
+	content: "\e63c";
+}
+.icon-arrow-up-right:before {
+	content: "\e63b";
+}
+.icon-arrow-right:before {
+	content: "\e639";
+}
+.icon-arrow-down-right:before {
+	content: "\e63a";
+}
+.icon-arrow-down:before {
+	content: "\e63e";
+}
+.icon-arrow-down-left:before {
+	content: "\e63f";
+}
+.icon-arrow-left:before {
+	content: "\e640";
+}
+.icon-console:before {
+	content: "\e60f";
+}
+.icon-github:before {
+	content: "\e608";
+}
+.icon-apple:before {
+	content: "\e60a";
+}
+.icon-android:before {
+	content: "\e609";
+}
+.icon-windows8:before {
+	content: "\e60b";
+}
+.icon-chrome:before {
+	content: "\e60d";
+}
+.icon-firefox:before {
+	content: "\e60e";
+}
+.icon-IE:before {
+	content: "\e60c";
+}
+.icon-bag:before {
+	content: "\e605";
+}
+.icon-progress-3:before {
+	content: "\e600";
+}
+.icon-progress-2:before {
+	content: "\e601";
+}
+.icon-brogress-1:before {
+	content: "\e602";
+}
+.icon-progress-0:before {
+	content: "\e603";
+}
+.icon-screen:before {
+	content: "\e607";
+}
+.icon-lock:before {
+	content: "\e604";
+}
+.icon-cross:before {
+	content: "\e606";
+}
