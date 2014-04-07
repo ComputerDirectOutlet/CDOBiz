@@ -1,67 +1,80 @@
 /*
 	jQuery.mmenu CSS
 */
-html.mm-opened .mm-page,
-html.mm-opened #mm-blocker,
-html.mm-opened .mm-fixed-top,
-html.mm-opened .mm-fixed-bottom,
-html.mm-opened .mm-menu.mm-horizontal > .mm-panel {
-  -webkit-transition: none 0.4s ease;
-  -moz-transition: none 0.4s ease;
-  -ms-transition: none 0.4s ease;
-  -o-transition: none 0.4s ease;
-  transition: none 0.4s ease;
-  -webkit-transition-property: top, right, bottom, left, border;
-  -moz-transition-property: top, right, bottom, left, border;
-  -ms-transition-property: top, right, bottom, left, border;
-  -o-transition-property: top, right, bottom, left, border;
-  transition-property: top, right, bottom, left, border; }
-html.mm-opened .mm-page,
-html.mm-opened #mm-blocker {
-  left: 0%;
-  top: 0;
-  margin: 0;
-  border: 0px solid rgba(0, 0, 0, 0); }
-html.mm-opened.mm-opening .mm-page,
-html.mm-opened.mm-opening #mm-blocker {
-  border: 0px solid rgba(100, 100, 100, 0); }
+
+html.mm-opened {
+  .mm-page, #mm-blocker, .mm-fixed-top, .mm-fixed-bottom, .mm-menu.mm-horizontal > .mm-panel {
+    -webkit-transition: none 0.4s ease;
+    -moz-transition: none 0.4s ease;
+    -ms-transition: none 0.4s ease;
+    -o-transition: none 0.4s ease;
+    transition: none 0.4s ease;
+    -webkit-transition-property: top, right, bottom, left, border;
+    -moz-transition-property: top, right, bottom, left, border;
+    -ms-transition-property: top, right, bottom, left, border;
+    -o-transition-property: top, right, bottom, left, border;
+    transition-property: top, right, bottom, left, border;
+  }
+  .mm-page, #mm-blocker {
+    left: 0%;
+    top: 0;
+    margin: 0;
+    border: 0px solid rgba(0, 0, 0, 0);
+  }
+  &.mm-opening {
+    .mm-page, #mm-blocker {
+      border: 0px solid rgba(100, 100, 100, 0);
+    }
+  }
+}
 
 .mm-menu .mm-hidden {
-  display: none; }
+  display: none;
+}
 
-.mm-fixed-top,
-.mm-fixed-bottom {
+.mm-fixed-top, .mm-fixed-bottom {
   position: fixed;
-  left: 0; }
+  left: 0;
+}
 
 .mm-fixed-top {
-  top: 0; }
+  top: 0;
+}
 
 .mm-fixed-bottom {
-  bottom: 0; }
+  bottom: 0;
+}
 
-html.mm-opened .mm-page,
-.mm-menu > .mm-panel {
+html.mm-opened .mm-page, .mm-menu > .mm-panel {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-html.mm-opened,
-html.mm-opened body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative; }
-
-html.mm-opened .mm-page {
-  height: 100%;
-  overflow: hidden;
-  position: absolute; }
-
-html.mm-background .mm-page {
-  background: inherit; }
+html {
+  &.mm-opened {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .mm-page {
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+    }
+  }
+  &.mm-background .mm-page {
+    background: inherit;
+  }
+}
 
 #mm-blocker {
   background: #fff;
@@ -70,16 +83,19 @@ html.mm-background .mm-page {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 999999; }
+  z-index: 999999;
+}
 
-html.mm-opened #mm-blocker,
-html.mm-blocking #mm-blocker {
-  display: block; }
-
-.mm-menu.mm-current {
-  display: block; }
+html {
+  &.mm-opened #mm-blocker, &.mm-blocking #mm-blocker {
+    display: block;
+  }
+}
 
 .mm-menu {
+  &.mm-current {
+    display: block;
+  }
   background: inherit;
   display: none;
   overflow: hidden;
@@ -88,8 +104,8 @@ html.mm-blocking #mm-blocker {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 0; }
-  .mm-menu > .mm-panel {
+  z-index: 0;
+  > .mm-panel {
     background: inherit;
     -webkit-overflow-scrolling: touch;
     overflow: scroll;
@@ -101,233 +117,309 @@ html.mm-blocking #mm-blocker {
     position: absolute;
     top: 0;
     left: 100%;
-    z-index: 0; }
-    .mm-menu > .mm-panel.mm-opened {
-      left: 0%; }
-    .mm-menu > .mm-panel.mm-subopened {
-      left: -40%; }
-    .mm-menu > .mm-panel.mm-highest {
-      z-index: 1; }
-    .mm-menu > .mm-panel.mm-hidden {
+    z-index: 0;
+    &.mm-opened {
+      left: 0%;
+    }
+    &.mm-subopened {
+      left: -40%;
+    }
+    &.mm-highest {
+      z-index: 1;
+    }
+    &.mm-hidden {
       display: block;
-      visibility: hidden; }
-
-.mm-menu .mm-list {
-  padding: 20px 0; }
-.mm-menu > .mm-list {
-  padding: 20px 0 40px 0; }
+      visibility: hidden;
+    }
+  }
+  .mm-list {
+    padding: 20px 0;
+  }
+  > .mm-list {
+    padding: 20px 0 40px 0;
+  }
+}
 
 .mm-panel > .mm-list {
   margin-left: -20px;
-  margin-right: -20px; }
-  .mm-panel > .mm-list:first-child {
-    padding-top: 0; }
+  margin-right: -20px;
+  &:first-child {
+    padding-top: 0;
+  }
+}
 
-.mm-list,
-.mm-list > li {
+.mm-list {
   list-style: none;
   display: block;
   padding: 0;
-  margin: 0; }
-
-.mm-list {
+  margin: 0;
+  > li {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
   font: inherit;
-  font-size: 14px; }
-  .mm-list a,
-  .mm-list a:hover {
-    text-decoration: none; }
-  .mm-list > li {
-    position: relative; }
-    .mm-list > li > a,
-    .mm-list > li > span {
+  font-size: 14px;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    &.mm-subopen {
+      width: 40px;
+      height: 100%;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      &::before {
+        content: '';
+        border-left-width: 1px;
+        border-left-style: solid;
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &.mm-fullsubopen {
+        width: 100%;
+        &:before {
+          border-left: none;
+        }
+      }
+      + {
+        a, span {
+          padding-right: 5px;
+          margin-right: 40px;
+        }
+      }
+    }
+    &.mm-subclose {
+      text-indent: 20px;
+      padding-top: 30px;
+      margin-top: -20px;
+    }
+    &.mm-subopen:after, &.mm-subclose:before {
+      content: '';
+      border: 2px solid transparent;
+      display: block;
+      width: 7px;
+      height: 7px;
+      margin-bottom: -5px;
+      position: absolute;
+      bottom: 50%;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &.mm-subopen:after {
+      border-top: none;
+      border-left: none;
+      right: 18px;
+    }
+    &.mm-subclose:before {
+      border-right: none;
+      border-bottom: none;
+      margin-bottom: -15px;
+      left: 22px;
+    }
+  }
+  > li {
+    position: relative;
+    > {
+      a, span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: inherit;
+        line-height: 20px;
+        display: block;
+        padding: 10px 10px 10px 20px;
+        margin: 0;
+      }
+    }
+    &:not(.mm-subtitle):not(.mm-label):not(.mm-noresults) {
+      &::after {
+        content: '';
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      &:after {
+        width: auto;
+        margin-left: 20px;
+        position: relative;
+        left: auto;
+      }
+    }
+  }
+  > li.mm-selected > a {
+    &.mm-subopen {
+      background: transparent;
+    }
+    &.mm-fullsubopen + {
+      a, span {
+        padding-right: 45px;
+        margin-right: 0;
+      }
+    }
+  }
+  > li {
+    &.mm-label {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      color: inherit;
-      line-height: 20px;
-      display: block;
-      padding: 10px 10px 10px 20px;
-      margin: 0; }
-  .mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-noresults)::after {
-    content: '';
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
-  .mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-noresults):after {
-    width: auto;
-    margin-left: 20px;
-    position: relative;
-    left: auto; }
-  .mm-list a.mm-subopen {
-    width: 40px;
-    height: 100%;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2; }
-    .mm-list a.mm-subopen::before {
-      content: '';
-      border-left-width: 1px;
-      border-left-style: solid;
-      display: block;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0; }
-    .mm-list a.mm-subopen.mm-fullsubopen {
-      width: 100%; }
-      .mm-list a.mm-subopen.mm-fullsubopen:before {
-        border-left: none; }
-    .mm-list a.mm-subopen + a,
-    .mm-list a.mm-subopen + span {
+      font-size: 10px;
+      text-transform: uppercase;
+      text-indent: 20px;
+      line-height: 25px;
       padding-right: 5px;
-      margin-right: 40px; }
-  .mm-list > li.mm-selected > a.mm-subopen {
-    background: transparent; }
-  .mm-list > li.mm-selected > a.mm-fullsubopen + a,
-  .mm-list > li.mm-selected > a.mm-fullsubopen + span {
-    padding-right: 45px;
-    margin-right: 0; }
-  .mm-list a.mm-subclose {
-    text-indent: 20px;
-    padding-top: 30px;
-    margin-top: -20px; }
-  .mm-list > li.mm-label {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 10px;
-    text-transform: uppercase;
-    text-indent: 20px;
-    line-height: 25px;
-    padding-right: 5px; }
-  .mm-list > li.mm-spacer {
-    padding-top: 40px; }
-    .mm-list > li.mm-spacer.mm-label {
-      padding-top: 25px; }
-  .mm-list a.mm-subopen:after,
-  .mm-list a.mm-subclose:before {
-    content: '';
-    border: 2px solid transparent;
-    display: block;
-    width: 7px;
-    height: 7px;
-    margin-bottom: -5px;
-    position: absolute;
-    bottom: 50%;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  .mm-list a.mm-subopen:after {
-    border-top: none;
-    border-left: none;
-    right: 18px; }
-  .mm-list a.mm-subclose:before {
-    border-right: none;
-    border-bottom: none;
-    margin-bottom: -15px;
-    left: 22px; }
+    }
+    &.mm-spacer {
+      padding-top: 40px;
+      &.mm-label {
+        padding-top: 25px;
+      }
+    }
+  }
+}
 
-.mm-menu.mm-vertical .mm-list .mm-panel {
-  display: none;
-  padding: 10px 0 10px 10px; }
-  .mm-menu.mm-vertical .mm-list .mm-panel li:last-child:after {
-    border-color: transparent; }
-.mm-menu.mm-vertical .mm-list li.mm-opened > .mm-panel {
-  display: block; }
-.mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen {
-  height: 40px; }
-  .mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 16px;
-    right: 16px; }
+.mm-menu.mm-vertical .mm-list {
+  .mm-panel {
+    display: none;
+    padding: 10px 0 10px 10px;
+    li:last-child:after {
+      border-color: transparent;
+    }
+  }
+  li.mm-opened > .mm-panel {
+    display: block;
+  }
+  > li.mm-opened > a.mm-subopen {
+    height: 40px;
+    &:after {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 16px;
+      right: 16px;
+    }
+  }
+}
 
 html.mm-opened .mm-page {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 
 .mm-ismenu {
-  background: #333333; }
+  background: $dropdown-background;
+}
 
 .mm-menu {
-  color: rgba(255, 255, 255, 0.6); }
-  .mm-menu .mm-list > li:after {
-    border-color: rgba(0, 0, 0, 0.15); }
-  .mm-menu .mm-list > li > a.mm-subclose {
-    background: rgba(0, 0, 0, 0.1);
-    color: rgba(255, 255, 255, 0.3); }
-  .mm-menu .mm-list > li > a.mm-subopen:after, .mm-menu .mm-list > li > a.mm-subclose:before {
-    border-color: rgba(255, 255, 255, 0.3); }
-  .mm-menu .mm-list > li > a.mm-subopen:before {
-    border-color: rgba(0, 0, 0, 0.15); }
-  .mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen),
-  .mm-menu .mm-list > li.mm-selected > span {
-    background: rgba(0, 0, 0, 0.1); }
-  .mm-menu .mm-list > li.mm-label {
-    background: rgba(255, 255, 255, 0.05); }
-  .mm-menu.mm-vertical .mm-list li.mm-opened > a.mm-subopen,
-  .mm-menu.mm-vertical .mm-list li.mm-opened > ul {
-    background: rgba(255, 255, 255, 0.05); }
+  color: $menu-textcolor;
+  .mm-list > li {
+    &:after {
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+    > a {
+      &.mm-subclose {
+        background: rgba(0, 0, 0, 0.1);
+        color: rgba(255, 255, 255, 0.3);
+      }
+      &.mm-subopen:after, &.mm-subclose:before {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+      &.mm-subopen:before {
+        border-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+    &.mm-selected > {
+      a:not(.mm-subopen), span {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+    &.mm-label {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+  &.mm-vertical .mm-list li.mm-opened > {
+    a.mm-subopen, ul {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+}
 
-html.mm-opened.mm-opening .mm-page,
-html.mm-opened.mm-opening #mm-blocker,
-html.mm-opened.mm-opening .mm-fixed-top,
-html.mm-opened.mm-opening .mm-fixed-bottom {
-  left: 80%; }
+html.mm-opened.mm-opening {
+  .mm-page, #mm-blocker, .mm-fixed-top, .mm-fixed-bottom {
+    left: 80%;
+  }
+}
 
 .mm-menu {
-  width: 80%; }
+  width: 80%;
+}
 
 @media all and (max-width: 175px) {
   .mm-menu {
-    width: 140px; }
+    width: 140px;
+  }
+  html.mm-opened.mm-opening {
+    .mm-page, #mm-blocker, .mm-fixed-top, .mm-fixed-bottom {
+      left: 140px;
+    }
+  }
+}
 
-  html.mm-opened.mm-opening .mm-page,
-  html.mm-opened.mm-opening #mm-blocker,
-  html.mm-opened.mm-opening .mm-fixed-top,
-  html.mm-opened.mm-opening .mm-fixed-bottom {
-    left: 140px; } }
 @media all and (min-width: 550px) {
   .mm-menu {
-    width: 440px; }
+    width: 440px;
+  }
+  html.mm-opened.mm-opening {
+    .mm-page, #mm-blocker, .mm-fixed-top, .mm-fixed-bottom {
+      left: 440px;
+    }
+  }
+}
 
-  html.mm-opened.mm-opening .mm-page,
-  html.mm-opened.mm-opening #mm-blocker,
-  html.mm-opened.mm-opening .mm-fixed-top,
-  html.mm-opened.mm-opening .mm-fixed-bottom {
-    left: 440px; } }
 html.mm-nooverflowscrolling.mm-opened {
   height: auto;
   overflow: auto;
   overflow-x: hidden;
-  overflow-y: scroll; }
-  html.mm-nooverflowscrolling.mm-opened body {
-    overflow: auto; }
-  html.mm-nooverflowscrolling.mm-opened .mm-page {
+  overflow-y: scroll;
+  body {
+    overflow: auto;
+  }
+  .mm-page {
     min-height: 1000px;
-    position: fixed; }
-  html.mm-nooverflowscrolling.mm-opened .mm-menu {
+    position: fixed;
+  }
+  .mm-menu {
     height: auto;
     min-height: 1000px;
     overflow: auto;
     overflow-x: hidden;
     position: relative;
     left: auto;
-    top: auto; }
-  html.mm-nooverflowscrolling.mm-opened > .mm-panel {
+    top: auto;
+  }
+  > .mm-panel {
     position: relative;
     height: auto;
     display: none;
-    left: 0; }
-    html.mm-nooverflowscrolling.mm-opened > .mm-panel.mm-current {
-      display: block; }
+    left: 0;
+    &.mm-current {
+      display: block;
+    }
+  }
+}

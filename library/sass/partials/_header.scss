@@ -1,11 +1,12 @@
 $height-large: 86px;
-$height-small: 44px;
+$height-small: 60px;
 
 #header {
     position: fixed;
-    height: $height-large;
+    height: $height-small;
     width: 100%;
     top: 0px;
+    z-index: 1000;
 
 
 }
@@ -25,14 +26,14 @@ $height-small: 44px;
     position: absolute;
         display: block;
         float: left;
-        height: $height-large;
-        width: $height-large;
-        border: 1px solid #1c1c1c; // stroke
-        background-color:rgba(137,0,0,1)!important; // layer fill content
+        height: $height-small;
+        width: $height-small;
+        //border: 1px solid #1c1c1c; // stroke
+        background-color:$menu-background!important; // layer fill content
         z-index: 100;
         background: url('../images/menu.png') center no-repeat;
-        @include respond-to(medium-screens) {display: none;}
-        @include respond-to(wide-screens) {display: none;}
+        @include respond-to(medium-screens) {display: none; }
+        @include respond-to(wide-screens) {display: none; }
 }
 
 #logo {
@@ -40,23 +41,29 @@ $height-small: 44px;
     width: 100%;
     display: block;
     float: right;
-    height: $height-large;
+    height: $height-small;
     @include respond-to(handhelds) { 
-        padding-left: $height-large;
+        padding-left: $height-small;
+
     }
+    @include respond-to(medium-screens) {height: $height-large;}
+    @include respond-to(wide-screens) { height: $height-large;}
 
     a {
 
         display: block;
         @include fill-parent();
-        background: url('../images/logo.png') center no-repeat;
-        height: $height-large;
+        background: url('../images/logosmall.png') center no-repeat;
+        @include respond-to(medium-screens) { background: url('../images/logo.png') center no-repeat; height: $height-large;}
+        @include respond-to(wide-screens) {background: url('../images/logo.png') center no-repeat; height: $height-large;}
+        height: $height-small;
+        
     }
 
 }
 
 .user-menu {
-    height: $height-large;
+
     @include span-columns(8, block-collapse);
     @include omega();
     background-color:rgba(137,0,0,0.75);
@@ -65,8 +72,9 @@ $height-small: 44px;
     @include respond-to(handhelds) { 
        display: none;
     }
-    @include respond-to(medium-screens) {     @include omega();}
-    @include respond-to(wide-screens) {     @include omega();}
+    height: $height-small;
+    @include respond-to(medium-screens) {     @include omega(); height: $height-large;}
+    @include respond-to(wide-screens) {     @include omega(); height: $height-large;}
 
 
     li {
@@ -98,25 +106,25 @@ $height-small: 44px;
 
 
 #search {
-    display: none;
+    //display: none;
     //a {background: url('../images/search.png') no-repeat;}
-    @include respond-to(handhelds) { }
-    @include respond-to(medium-screens) { display: block;}
-    @include respond-to(wide-screens) { display: block; }
+   // @include respond-to(handhelds) { }
+   // @include respond-to(medium-screens) { display: block;}
+    //@include respond-to(wide-screens) { display: block; }
 }
 #sign-in {
-    display: none;
+   // display: none;
     //a {background: url('../images/signin.png') no-repeat;}
-    @include respond-to(handhelds) {}
-    @include respond-to(medium-screens) {display: block; }
-    @include respond-to(wide-screens) { display: block; }
+    //@include respond-to(handhelds) {}
+    //@include respond-to(medium-screens) {display: block; }
+    //@include respond-to(wide-screens) { display: block; }
 }
 #cart {
-    display: none;
+    //display: none;
     //a {background: url('../images/cart.png') no-repeat;}
-    @include respond-to(handhelds) { }
-    @include respond-to(medium-screens) { display: block;}
-    @include respond-to(wide-screens) { display: block; }
+    //@include respond-to(handhelds) { }
+   //@include respond-to(medium-screens) { display: block;}
+    //@include respond-to(wide-screens) { display: block; }
 }
 
 #mobile-header {
@@ -127,11 +135,31 @@ $height-small: 44px;
 
 
 .page-heading {
- width: 100%;
-    height: 200px;
+   //  width: 100%;
+    height: 500px;
+   position: relative;
+    overflow: hidden;
     img {
-        @include fill-parent();
+        width: auto;
+        text-align: center;
+        //@include fill-parent();
         //background-image: url(library/images/bg.png);
+        min-height: 100%;
+        min-width: 100%;
+        
+    }
+    h1 {
+        padding-left: 5px;
+        color: $h1-font-color;
+        font-family: $fancy-font-family;
+        font-weight: $heading-font-weight;
+        top: 140px;
+        position: absolute;
+        font-style: italic;
+        font-size: 40pt;
+        @include respond-to(medium-screens) {
+            font-size: 100pt;
+        }
     }
 }
 

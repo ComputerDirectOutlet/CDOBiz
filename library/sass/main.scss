@@ -1,5 +1,6 @@
 // Modules and Variables
 @import "partials/base";
+@import "modules/colors";
 
 // Partials
 @import "partials/header";
@@ -10,11 +11,15 @@
 @import "partials/grids";
 @import "partials/shame";
 @import "partials/responsive";
+@import "partials/content";
 // ...
 
 // Third-party
 @import "vendor/normalize-min";
 @import "vendor/mmenu";
+@import "vendor/component";
+//@import "vendor/component2";
 //@import "vendor/demo";
 //
 //
+

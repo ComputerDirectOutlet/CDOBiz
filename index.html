@@ -9,6 +9,7 @@
 		<!--Typekit fonts-->
 		<script type="text/javascript" src="//use.typekit.net/klu1tbh.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="library/js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div id="page">
@@ -17,34 +18,65 @@
 				<a href="#menu" id="button-menu"></a>
                     <span id="logo"><a href="#" ></a>
 				</div>
-				<ul class="user-menu">
-				    <li id="search">
-				        <a href="#">Systems</a>
-				    </li>
-				    <li id="sign-in">
-				        <a href="#">Servers</a>
-				    </li>
-				    <li id="cart">
-				        <a href="#">Our Story</a>
-				    </li>
-				    <li >
-				        <a href="#">Search</a>
-				    </li>
-				    <li >
-				        <a href="#">Sign In</a>
-				    </li>
-				    <li >
-				        <a href="#">Cart: 0</a>
-				    </li>
-				</ul>
+                <nav class="cbp-hsmenu-wrapper desktop-menu" id="cbp-hsmenu-wrapper">
+					<div class="cbp-hsinner ">
+						<ul class="cbp-hsmenu">
+							<li>
+								<a href="#">Systems</a>
+								<ul class="cbp-hssubmenu">
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									
+								</ul>
+							</li>
+							<li>
+								<a href="#">Servers</a>
+								<ul class="cbp-hssubmenu cbp-hssub-rows">
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									
+								</ul>
+							</li>
+							<li>
+								<a href="#">Services</a>
+								<ul class="cbp-hssubmenu">
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Support</a>
+								<ul class="cbp-hssubmenu">
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+									<li><a href="#"><img src="library/images/box.png" alt="img01"/><span>A Computer</span></a></li>
+								</ul>
+							</li>
+							<li><a href="#">Our Mission</a></li>
+							<li><a href="#">CDO Home</a></li>
+						</ul>
+					</div>
+				</nav>
+                
 			</div>
 			<div id="content">
 				<div class="page-heading" >
-					<img src="library/images/bg.png" style="height:.01px;" />	
-					<h1>Test Page Title</h1>				
-				</div>	
+					<img src="library/images/bg.png"/>	
+					<h1>Test Page Title</h1>	
 			
-				<p>Sample content</p>
+				</div>	
+
+
 			</div>
 			<nav id="menu">
 				<ul>
@@ -94,6 +126,10 @@
 				</ul>
 			</nav>
 		</div>
+    <script src="library/js/cbpHorizontalSlideOutMenu.min.js"></script>
+		<script>
+			var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+		</script>
 	</body>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
